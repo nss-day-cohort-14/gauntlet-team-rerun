@@ -1,6 +1,9 @@
 'use strict'; 
 
-const Person = require('../src/person');
+const $ = require('jQuery');
+const header = require('../views/header.jade');
+const buildScreen = require('../views/buildScreen.jade');
 
-let testPerson = new Person();
+$('body').append(header({}));
+$('body').append(buildScreen({}));
 

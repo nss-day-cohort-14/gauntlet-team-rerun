@@ -4,6 +4,7 @@ var Person = require('../person');
 
 describe('specs for person', function() {
 	let testPerson = new Person();
+	console.log(testPerson);
 	it('should behave...person is defined', function() {
 		expect(testPerson).toBeDefined();
 	});
@@ -22,10 +23,13 @@ describe('specs for person', function() {
 	it('have a weapons attribute', function() {
 		expect(testPerson.weapons).toBeDefined();
 	});
-	// it('should be able to hold weapons', function() {
-	// 	testPerson.setWeapons({name:'insult', damage:'50'});
-	// 	expect(testPerson.weapons.length).toBe(1);
-	// 	expect(testPerson.weapons).toEqual([{name:'insult'}]);
-	// })
+
+	it('should be able to hold weapons', function() {
+		testPerson.setWeapons({name:'insult'});
+		console.log(testPerson);
+		expect(testPerson.weapons.length).toBe(1);
+		expect(testPerson.weapons).toEqual([{name:'insult'}]);
+	})
+
 
 });
