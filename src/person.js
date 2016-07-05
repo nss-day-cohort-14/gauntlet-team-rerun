@@ -6,9 +6,9 @@ const Person = function() {
 	this.patience = 0;
 	this.sensitivity = 0;
 	this.weapons = [];
-}
+};
 Person.prototype.setWeapons = function(weapon) {
 	this.weapons.push(weapon);
-}
+};
 
 module.exports = Person;
