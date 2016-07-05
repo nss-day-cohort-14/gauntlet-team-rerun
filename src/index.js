@@ -1,4 +1,4 @@
-'use strict';
+'use strict'; 
 
 const $ = require('jQuery');
 const header = require('../views/header.jade');
