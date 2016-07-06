@@ -5,7 +5,6 @@
 .didone {
 	font-family: 'Antic Didone', serif;
 }
-
 .header {
 	background-color: #B2C5BB;
 	color: white;
@@ -53,19 +52,19 @@
 	}
 }
 .feast {
-	background: url('../../src/images/thanksgiving-rockwell.jpg');
+	background-image: url('../../src/images/thanksgiving-rockwell.jpg');
+}
+.append-point {
 	background-size: cover;
 	background-position: center 0px;
 	background-repeat: no-repeat;
-}
-.append-point {
 	padding-top: 4rem;
 	min-height: 100vh;
 	width: 100vw;
 	display: block;
 	.buildScreen {
 }
-	.rules {
+	.rules, .aboutUs {
 		width: 90%;
 	    margin: 30rem auto 0;
 	    padding: 2rem;
@@ -73,11 +72,31 @@
 	    color: whitesmoke;
 	    background: rgba(0,0,0,0.5);
 	}
-	
+	.buildScreen {
+		width: 90%;
+	    margin: 30rem auto 0;
+	    padding: 2rem;
+	    border-radius: 2rem;
+	    color: whitesmoke;
+	    background: rgba(0,0,0,0.5);
+	    .choose--div {
+	    	text-align: center;
+			.choose--select {
+				display: block;
+				width: 20rem;
+				margin: 1rem auto;
+			}
+			.choose--button, {
+				display: block;
+				margin: 3rem auto;
+			}
+	    }
+	    .fight--button {
+	    	display: block;
+	    	margin: 3rem auto;
+	    }
+	}
 }
-
-
-
 .active {
 	color: white;
 	background-color: #391815;

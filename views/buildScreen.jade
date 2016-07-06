@@ -1,1 +1,9 @@
-div.container-fluid.buildScreen
+div.buildScreen
+	div.choose--div
+		label(for='choose') Choose Family Member
+		select#choose.choose--select
+			each val in family
+				option(value=val)= val
+		button#choose-btn.btn.choose--button Pick A Winner!
+	div.fight--div
+		button#fight.btn.fight--button Fight!
