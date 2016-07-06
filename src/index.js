@@ -3,12 +3,13 @@
 const $ = require('jQuery');
 const header = require('../views/header.jade');
 const buildScreen = require('../views/buildScreen.jade');
+const rules = require('../views/rules.jade');
 
 
 $(function() {
 
-	$('div.append-point').append(header({}));
-	$('div.append-point').append(buildScreen({}));
+	$('body').prepend(header({}));
+	$('div.append-point').append(rules({}));
 
 	$('#rules').on('click', function() {
 		toggleActive(this);
