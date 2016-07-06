@@ -21,9 +21,6 @@ header {
 		.link {
 			width: 15rem;
 			margin-top: 1rem;
-			.link--div {
-				border: 1px solid black;
-			}
 			a {
 				&:link {
 					text-decoration: none;
@@ -45,6 +42,9 @@ header {
 						color: white;
 					}
 				}
+				.link--div {
+					border: 1px solid black;
+				}
 			}
 		}
 	}
@@ -55,4 +55,9 @@ header {
 	background: url('../../src/images/thanksgiving-rockwell.jpg');
 	background-size: 100%;
 	background-repeat: no-repeat;
+}
+
+.active {
+	color: white;
+	background-color: #391815;
 }

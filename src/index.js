@@ -11,14 +11,19 @@ $(function() {
 	$('div.append-point').append(buildScreen({}));
 
 	$('#rules').on('click', function() {
-		console.log('rules');
-		// toggle active for the link when it is clicked
+		toggleActive(this);
 	});
 	$('#start').on('click', function() {
-		console.log('start');
+		toggleActive(this);
 	});
 	$('#about').on('click', function() {
-		console.log('about');
+		toggleActive(this);
 	});
+
+	function toggleActive(link) {
+		let activeSelector = `#${link.id} div`
+		$('.link--div').removeClass('active');
+		$(activeSelector).addClass('active');
+	}
 
 });
