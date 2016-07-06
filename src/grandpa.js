@@ -7,6 +7,6 @@ const Grandpa = function() {
 	this.bac = 0;
 	this.anger = 0;
 	this.hearingAidBatteryLevel = 0;
-}
+};
 
 module.exports = Grandpa;
