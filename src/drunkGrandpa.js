@@ -11,7 +11,7 @@ function DrunkGrandpa () {
 }
 
 let alcoholicHammer = {
-	name: 'Alcoholic Hammer ', // name
+	name: 'Hennessy Hammer ', // name
   damage: 8, // how much it could reduce health
   snarkyRemark: "Who do I have to disown to get another drink around here (hicCUP!).", // what will show up on the screen
   use: 2 // how many time in a round this move can be used
@@ -39,3 +39,4 @@ let boozeOoka = {
 };
 
 module.exports = DrunkGrandpa;
+

@@ -32,7 +32,7 @@ let theSnort = {
 };
 
 let sigh = {
-	name: 'The Sigh of Immense Disappointment', // name
+	name: 'Ultra-Sigh', // name
   damage: 18, // how much it could reduce health
   snarkyRemark: "(old man-like sigh) I can't believe I have to put up with a joke like you.", // what will show up on the screen
   use: 1 // how many time in a round this move can be used
