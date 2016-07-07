@@ -26,10 +26,9 @@ describe('specs for person', function() {
 
 	it('should be able to hold weapons', function() {
 		testPerson.setWeapons({name:'insult'});
-		console.log(testPerson);
 		expect(testPerson.weapons.length).toBe(1);
 		expect(testPerson.weapons).toEqual([{name:'insult'}]);
-	})
+	});
 
 
 });
