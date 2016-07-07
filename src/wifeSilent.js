@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 const Weapon = require('../src/Weapon');
 
@@ -8,6 +8,6 @@ const WifeSilent = function() {
 	this.remark = "...";
 	this.damage = 3;
 	this.uses = 4;
-}
+};
 
 module.exports = WifeSilent;
