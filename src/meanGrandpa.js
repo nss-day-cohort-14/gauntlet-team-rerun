@@ -1,6 +1,7 @@
 "use strict";
 
-const Grandpa = require('../src/grandpa.js');
+const Grandpa = require('../src/grandpa');
+const GrandWeapon = require('../src/GrandWeapon')
 
 function MeanGrandpa () {
 	Grandpa.call(this);
@@ -9,6 +10,10 @@ function MeanGrandpa () {
 	this.viciousness = 50;
 	this.patience = 40;
 	this.sensitivity = 0;
+	this.weapons.push(new GrandWeapon.BlasterFromThePast());
+	this.weapons.push(new GrandWeapon.InsultBarrage());
+	this.weapons.push(new GrandWeapon.Leer());
+	this.weapons.push(new GrandWeapon.UltraSigh());
 }
 
 module.exports = MeanGrandpa;
