@@ -1,7 +1,7 @@
 'use strict';
 
 const Person = function() {
-	this.health = 100;
+	this.health = 30;
 	this.viciousness = 0;
 	this.patience = 0;
 	this.sensitivity = 0;
