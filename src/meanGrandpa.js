@@ -8,6 +8,7 @@ function MeanGrandpa () {
 	this.anger = 50;
 	this.viciousness = 50;
 	this.patience = 40;
+	this.sensitivity = 0;
 }
 
 module.exports = MeanGrandpa;
