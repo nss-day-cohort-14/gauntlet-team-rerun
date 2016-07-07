@@ -5,6 +5,7 @@ const FamWeapon = require('../src/FamWeapon');
 
 const DaughterInLaw = function() {
 	Person.call(this);
+	this.name = "Dawn";
 	this.sensitivity = 10;
 	this.viciousness = 80;
 	this.patience = 40;
