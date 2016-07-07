@@ -19,19 +19,19 @@ describe('grandpa types specs', function() {
 		expect(smart.health).toEqual(100);
 	});
 	it('should behave...mean Grandpa weapons are set', function() {
-		mean.setWeapons(new GrandWeapon.Booze());
+		mean.setWeapons(new GrandWeapon.BoozeOoka());
 		expect(mean.weapons).toEqual(jasmine.arrayContaining([
 			jasmine.objectContaining({name: 'BoozeOoka'})
 		]));
 	});
 	it('should behave...drunk Grandpa weapons are set', function() {
-		drunk.setWeapons(new GrandWeapon.Booze());
+		drunk.setWeapons(new GrandWeapon.BoozeOoka());
 		expect(mean.weapons).toEqual(jasmine.arrayContaining([
 			jasmine.objectContaining({name: 'BoozeOoka'})
 		]));
 	});
 	it('should behave...smart Grandpa weapons are set', function() {
-		smart.setWeapons(new GrandWeapon.Booze());
+		smart.setWeapons(new GrandWeapon.BoozeOoka());
 		expect(mean.weapons).toEqual(jasmine.arrayContaining([
 			jasmine.objectContaining({name: 'BoozeOoka'})
 		]));

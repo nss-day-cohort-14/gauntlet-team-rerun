@@ -52,10 +52,30 @@ $(function() {
 			argument.grandpa = new GrandpaType[type]();
 			let famType = $('#choose').val();
 			console.log(famType);
-			argument.familyMember = new FamilyType[famType]();
+			argument.familyMember = new FamilyType[family[famType]]();
 			console.log(argument);
 		}
 	});
+	$('.append-point').on('click', '#fight', function() {
+		let results = argument.fight();
+		// display results;
+		console.log(results);
+		if (results.familyAttacks === 1) chooseNextFam();
+		if (results.fatality === 'family') chooseNextFam();
+		if (results.fatality === 'grandpa') victory();
+	});
+
+	function chooseNextFam() {
+		console.log('chooseNextFam');
+		// show grandpa gloating
+		// run buildscreen again
+		/// rerun the fight
+	}
+
+	function victory() {
+		console.log('victory');
+		// show family gloating
+	}
 
 	function toggleActive(link) {
 		let activeSelector = `#${link.id} div`

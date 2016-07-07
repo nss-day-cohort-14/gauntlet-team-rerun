@@ -18,8 +18,18 @@ const Argument = function() {
 	this.getDefense = function(patience, sensitivity) {
 		return ((patience/10) - (sensitivity/10)) + Math.floor(Math.random() * 10) - 5;
 	};
-	this.completeRound = function(gweap, famweap) {
+	this.fight = function() {
+		// choose weapons and then pass weapons in to completeround;
+		let gweap = this.grandpa.weapons[Math.floor(Math.random() * 4)];
+		let x = this.familyMember.weapons.length;
+		let famweap = this.familyMember.weapons.splice(Math.floor(Math.random() * x),1);
+		// console.log(this.completeRound(gweap,famweap[0], x));
+		// show avatars in jumpcut 3 each
+		return this.completeRound(gweap,famweap[0], x);
+	};
+	this.completeRound = function(gweap, famweap, familyattacks) {
 		let round = {};
+		round.familyAttacks = familyattacks;
 		let gattack = this.getAttack(gweap.damage, this.grandpa.viciousness);
 		let fattack = this.getAttack(famweap.damage, this.familyMember.viciousness); 
 		gattack -= this.getDefense(this.grandpa.patience, this.grandpa.sensitivity);

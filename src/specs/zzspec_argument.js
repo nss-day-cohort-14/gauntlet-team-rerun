@@ -11,9 +11,9 @@ describe('argument spec fight engine', function() {
 	testArgument.grandpa = new GrandpaType.Mean();
 	testArgument.familyMember = new FamilyType.Daughter_in_law();
 	testArgument.grandpa.setWeapons(new GrandWeapon.Leer());
-	testArgument.grandpa.setWeapons(new GrandWeapon.Mumble());
-	testArgument.grandpa.setWeapons(new GrandWeapon.Racist());
-	testArgument.grandpa.setWeapons(new GrandWeapon.Snort());
+	testArgument.grandpa.setWeapons(new GrandWeapon.MumbleBee());
+	testArgument.grandpa.setWeapons(new GrandWeapon.RacistComment());
+	testArgument.grandpa.setWeapons(new GrandWeapon.TheSnort());
 	testArgument.familyMember.setWeapons(new FamWeapon.DaughterInLawBomb());
 	testArgument.familyMember.setWeapons(new FamWeapon.DaughterInLawNoFilter());
 	testArgument.familyMember.setWeapons(new FamWeapon.DaughterInLawBlast());
@@ -57,6 +57,7 @@ describe('argument spec fight engine', function() {
 			testRound.push(testArgument.completeRound(testArgument.grandpa.weapons[x], testArgument.familyMember.weapons[x]));
 			console.log(testRound[x]);
 		}
+		testArgument.fight();
 		expect(testRound1.winner).toBeDefined();
 	});
 });
