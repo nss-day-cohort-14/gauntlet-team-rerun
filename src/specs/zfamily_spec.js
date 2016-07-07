@@ -11,7 +11,7 @@ describe('family specs', function() {
 	it('should be able to create son dynamically', function() {
 		let testName = 'Son';
 		let testSon = new Family[testName]();
-		expect(testSon.health).toBe(100);
+		expect(testSon.health).toBe(30);
 	});
 	it('should be able to set weapns through the family class', function() {
 		let testName = 'Wife';
