@@ -8,6 +8,8 @@ const aboutUs = require('../views/aboutUs.jade');
 const Argument = require('../src/argument');
 const GrandpaType = require('../src/GrandpaType');
 const FamilyType = require('../src/family');
+const battle = require('../views/battle.jade');
+const fightResults = require('../views/fightResults.jade');
 
 let argument;
 
@@ -53,21 +55,36 @@ $(function() {
 			let famType = $('#choose').val();
 			console.log(famType);
 			argument.familyMember = new FamilyType[family[famType]]();
+			family.splice(famType, 1);
+			console.log(family);
+			console.log(argument);
+		} else {
+			let famType = $('#choose').val();
+			console.log(famType);
+			argument.familyMember = new FamilyType[family[famType]]();
+			family.splice(famType, 1);
+			console.log(family);
 			console.log(argument);
 		}
+		$('.append-point').empty();
+		$('.append-point').append(battle({}));
 	});
 	$('.append-point').on('click', '#fight', function() {
 		let results = argument.fight();
 		// display results;
 		console.log(results);
-		if (results.familyAttacks === 1) chooseNextFam();
-		if (results.fatality === 'family') chooseNextFam();
+		$('.results').empty();
+		let familyMember = argument.familyMember;
+		$('.results').append(fightResults({results, familyMember}));
+		if (results.familyAttacks === 1 || results.fatality === 'family') chooseNextFam();
 		if (results.fatality === 'grandpa') victory();
 	});
 
 	function chooseNextFam() {
 		console.log('chooseNextFam');
-		// show grandpa gloating
+		alert('Grandpa won that round, choose another fighter');
+		$('div.append-point').empty();
+		$('div.append-point').append(buildScreen({family: family}));
 		// run buildscreen again
 		/// rerun the fight
 	}
