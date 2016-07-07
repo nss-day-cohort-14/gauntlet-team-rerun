@@ -5,4 +5,5 @@ const Argument = function() {
 	this.familyMember = null;
 };
 
+
 module.exports = Argument;
