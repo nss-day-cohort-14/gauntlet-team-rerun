@@ -5,14 +5,19 @@ const header = require('../views/header.jade');
 const buildScreen = require('../views/buildScreen.jade');
 const rules = require('../views/rules.jade');
 const aboutUs = require('../views/aboutUs.jade');
+const Argument = require('../src/argument');
+const GrandpaType = require('../src/GrandpaType');
+const FamilyType = require('../src/family');
+
+let argument;
 
 let family = [
-	'Grandma',
-	'Uncle Bobby',
-	'Jimmy',
-	'Sue',
-	'Beth',
-	'Diane'
+	'Daughter',
+	'Brother',
+	'Wife',
+	'Grandson',
+	'Son',
+	'Daughter_in_law'
 ];
 
 $(function() {
@@ -39,10 +44,32 @@ $(function() {
 		$('div.append-point').append(aboutUs({}));
 	});
 
+	// build buttons
+	$('.append-point').on('click', '#choose-btn', function() {
+		if (argument === undefined) {
+			argument = new Argument();
+			let type = getGramps();
+			argument.grandpa = new GrandpaType[type]();
+			let famType = $('#choose').val();
+			console.log(famType);
+			argument.familyMember = new FamilyType[famType]();
+			console.log(argument);
+		}
+	});
+
 	function toggleActive(link) {
 		let activeSelector = `#${link.id} div`
 		$('.link--div').removeClass('active');
 		$(activeSelector).addClass('active');
+	}
+
+	function getGramps() {
+		let gramps = Math.floor(Math.random() * 3);
+		switch (gramps) {
+			case 0: return 'Mean';
+			case 1: return 'Smart';
+			case 2: return 'Drunk'; 
+		}
 	}
 
 });
