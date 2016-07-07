@@ -1,9 +1,9 @@
 div.buildScreen
 	div.choose--div
 		label(for='choose') Choose Family Member
-		select#choose.choose--select
-			each val in family
-				option(value=val)= val
+		select#choose.choose--select(name='famMember')
+			each val, index in family
+				option(value=index)= val
 		button#choose-btn.btn.choose--button Pick A Winner!
 	div.fight--div
 		button#fight.btn.fight--button Fight!
