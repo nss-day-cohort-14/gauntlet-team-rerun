@@ -200,10 +200,10 @@ FamWeapon.GrandsonNoise = function() {
 	this.uses = 1;
 };
 
-FamWeapon.Grandson = function() {
+FamWeapon.GrandsonSpill = function() {
 	Weapon.call(this);
-	this.name = "";
-	this.remark = "";
+	this.name = "Magic Spill";
+	this.remark = "(Grandpa's drink has accidentally been knocked over)";
 	this.damage = 4;
 	this.uses = 1;
 };
