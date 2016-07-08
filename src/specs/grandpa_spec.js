@@ -2,7 +2,7 @@
 
 const Grandpa = require('../grandpa.js');
 
-describe('specs for Grandpa', function () {
+xdescribe('specs for Grandpa', function () {
 	let testGrandpa = new Grandpa();
 	// console.log("testGrandpa", testGrandpa);
 	it('Grandpa function should be definined', function () {

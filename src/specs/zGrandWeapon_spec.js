@@ -2,7 +2,7 @@
 
 const GrandWeapon = require('../grandWeapon');
 
-describe('specs for Grandpa Weapons', function() {
+xdescribe('specs for Grandpa Weapons', function() {
 	let Blaster = new GrandWeapon.BlasterFromThePast();
 	it('Grandpa Weapons should be defined', function() {
 		expect(Blaster).toBeDefined();

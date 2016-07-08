@@ -2,7 +2,7 @@
 
 const Daughter = require("../daughter");
 
-describe('specs for daughter', function(){
+xdescribe('specs for daughter', function(){
 	let testDaughter = new Daughter();
 	console.log("testDaughter", testDaughter);
 	it('should be defined', function(){

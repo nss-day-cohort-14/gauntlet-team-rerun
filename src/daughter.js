@@ -6,6 +6,7 @@ const FamWeapon = require('../src/FamWeapon');
 const Daughter = function() {
 	Person.call(this);
 	this.img = '../src/images/daughter.jpg';
+	this.name = "Susie";
 	this.sensitivity = 50;
 	this.viciousness = 40;
 	this.patience = 50;
