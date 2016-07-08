@@ -153,7 +153,7 @@ FamWeapon.DaughterInLawNoFilter = function() {
 FamWeapon.DaughterInLawBlast = function() {
 	Weapon.call(this);
 	this.name = "Blaster From the Past";
-	this.remark = "It's like my wedding night all over again, you probably won't remember this either";
+	this.remark = "It's like my wedding all over again, you probably won't remember this either";
 	this.damage = 10;
 	this.uses = 1;
 };
