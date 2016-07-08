@@ -5,6 +5,7 @@ const GrandWeapon = require('../src/GrandWeapon')
 
 const SmartGrandpa = function () {
 	Grandpa.call(this);
+	this.img = '../src/images/grandpa-einstein-smart.jpg';
 	this.bac = 1;
 	this.anger = 25;
 	this.viciousness = 40;
