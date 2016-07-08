@@ -77,7 +77,7 @@
 	    color: whitesmoke;
 	    background: rgba(0,0,0,0.5);
 	}
-	.buildScreen, .fightScreen {
+	.buildScreen, .fightScreen, .victoryScreen {
 		width: 90%;
 	    margin: 1rem auto 0;
 	    padding: 2rem;
@@ -140,4 +140,7 @@
 .active {
 	color: white;
 	background-color: #391815;
+}
+.victory {
+	text-align: center;
 }
