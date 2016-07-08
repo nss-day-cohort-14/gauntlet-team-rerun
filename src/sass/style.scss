@@ -1,3 +1,7 @@
+.devel {
+	border: 1px dashed pink;
+}
+
 .arapey {
 	font-family: 'Arapey', serif;
 }
@@ -15,6 +19,7 @@
 	display: block;
 	h1 {
 		margin: 2rem;
+		font-size: 7rem;
 		font-weight: 900;
 	}
 	.navbar {
@@ -74,11 +79,14 @@
 	}
 	.buildScreen {
 		width: 90%;
-	    margin: 30rem auto 0;
+	    margin: 40rem auto 0;
 	    padding: 2rem;
 	    border-radius: 2rem;
 	    color: whitesmoke;
-	    background: rgba(0,0,0,0.5);
+	    background: rgba(0,0,0,0.7);
+	    label {
+	    	font-size: 3rem;
+	    }
 	    .choose--div {
 	    	text-align: center;
 			.choose--select {
@@ -91,9 +99,17 @@
 				margin: 3rem auto;
 			}
 	    }
-	    .fight--button {
-	    	display: block;
-	    	margin: 3rem auto;
+	    .results {
+	    	font-size: 2rem;
+	    	// text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	    	.fight--grandpa, .fight--family {
+	    		margin-top: 2rem;
+	    	}
+		    .fight--button {
+		    	display: block;
+		    	margin: 3rem auto;
+		    }
+	    	
 	    }
 	}
 }
