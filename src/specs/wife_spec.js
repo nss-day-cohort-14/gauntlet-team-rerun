@@ -2,7 +2,7 @@
 
 const Wife = require("../wife");
 
-describe('specs for wife', function(){
+xdescribe('specs for wife', function(){
 	let testWife = new Wife();
 	console.log("testWife", testWife);
 	it('should be defined', function(){

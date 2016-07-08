@@ -2,7 +2,7 @@
 
 var Person = require('../person');
 
-describe('specs for person', function() {
+xdescribe('specs for person', function() {
 	let testPerson = new Person();
 	console.log(testPerson);
 	it('should behave...person is defined', function() {
