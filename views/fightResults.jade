@@ -1,7 +1,11 @@
 div.row.fight--container.arapey
 	div.col-xs-6.devel.fight--grandpa
-		p= 'Grandpa attacks with ' + results.gweap
-		p= results.gremark
+		img(src=gImage)
+		p.weap= 'Grandpa attacks with ' + results.gweap + '!'
+		p.remark= '"'+ results.gremark + '."'
+		p.damage= 'Remaining health: ' + results.ghealth
 	div.col-xs-6.devel.fight--family
-		p= familyMember + ' attacks with ' + results.famweap
-		p= results.famremark
+		img(src=fImage)
+		p.weap= familyMember + ' attacks with ' + results.famweap + '!'
+		p.remark= '"'+ results.famremark + '."'
+		p.damage= 'Remaining health: ' + results.fhealth
