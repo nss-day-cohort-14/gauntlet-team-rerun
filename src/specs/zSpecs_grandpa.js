@@ -3,7 +3,7 @@
 const GrandpaType = require('../GrandpaType');
 const GrandWeapon = require('../GrandWeapon');
 
-describe('grandpa types specs', function() {
+xdescribe('grandpa types specs', function() {
 	let mean = new GrandpaType.Mean();
 	let smart = new GrandpaType.Smart();
 	let drunk = new GrandpaType.Drunk();

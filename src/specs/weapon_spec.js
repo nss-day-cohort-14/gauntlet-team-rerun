@@ -2,7 +2,7 @@
 
 const Weapon = require('../weapon');
 
-describe('weapon spec', function() {
+xdescribe('weapon spec', function() {
 	it('weapon to be defined', function() {
 		let testWeapon = new Weapon();
 		testWeapon.damage = 0;

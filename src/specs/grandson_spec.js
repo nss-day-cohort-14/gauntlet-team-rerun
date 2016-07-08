@@ -2,7 +2,7 @@
 
 const Grandson = require("../grandson");
 
-describe('specs for grandson', function(){
+xdescribe('specs for grandson', function(){
 	let testGrandson = new Grandson();
 	console.log("testGrandson", testGrandson);
 	it('should be defined', function(){

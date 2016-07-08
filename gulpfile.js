@@ -79,7 +79,9 @@ gulp.task('specs', function() {
   return gulp.src('./src/specs/*.js')
     .pipe(jasmine({
         reporter: new jasmineSpecReporter({
-        displayFailuresSummary: false,
+          displayPendingSummary: false,  // display summary of all pending specs after execution
+          displayFailuresSummary: false,
+          displayPendingSpec: false    // display each pending spec
         }),
         errorOnFail: false,
     }));

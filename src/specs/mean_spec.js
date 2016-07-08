@@ -2,7 +2,7 @@
 
 const MeanGrandpa = require('../meanGrandpa.js');
 
-describe('specs for MeanGrandpa', function () {
+xdescribe('specs for MeanGrandpa', function () {
 	let testMeanGrandpa = new MeanGrandpa();
 	console.log("testMeanGrandpa", testMeanGrandpa);
 	it('MeanGrandpa should be defined', function () {
