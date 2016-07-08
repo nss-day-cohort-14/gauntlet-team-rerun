@@ -4,7 +4,7 @@ const Person = require('../src/person');
 
 const Grandpa = function() {
 	Person.call(this);
-	this.health = 100;
+	this.health = 2000;
 	this.bac = 0;
 	this.anger = 0;
 	this.hearingAidBatteryLevel = 0;

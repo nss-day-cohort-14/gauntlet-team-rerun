@@ -2,6 +2,7 @@
 
 const Argument = function() {
 	// grandpa and familymember are the combatants and arguers
+	this.fights = 0;
 	this.grandpa = null;
 	this.familyMember = null;
 	// checks to see if either grandpa or family member has died
@@ -52,6 +53,7 @@ const Argument = function() {
 		round.winner = gattack > fattack ? 'grandpa' : 'family';
 		round.fatality = fatality(this.grandpa.health, this.familyMember.health); 
 		// round gets returned and passed into the display view
+		round.fights = this.fights;
 		return round;
 	};
 };
