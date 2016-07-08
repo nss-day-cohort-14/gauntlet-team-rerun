@@ -5,7 +5,7 @@ const GrandWeapon = require('../src/GrandWeapon')
 
 function MeanGrandpa () {
 	Grandpa.call(this);
-	this.img = '../src/grandpa-mean-rockwell.jpg';
+	this.img = '../src/images/grandpa-mean-rockwell.jpg';
 	this.bac = 1.2;
 	this.anger = 50;
 	this.viciousness = 50;

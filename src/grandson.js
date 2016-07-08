@@ -5,7 +5,7 @@ const FamWeapon = require('../src/FamWeapon');
 
 const Grandson = function() {
 	Person.call(this);
-	this.img = '../src/grandson.jpg';
+	this.img = '../src/images/grandson.jpg';
 	this.sensitivity = 60;
 	this.viciousness = 40;
 	this.patience = 20;
