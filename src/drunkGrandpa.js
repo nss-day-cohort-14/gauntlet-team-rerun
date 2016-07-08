@@ -5,6 +5,7 @@ const GrandWeapon = require('../src/GrandWeapon')
 
 function DrunkGrandpa () {
 	Grandpa.call(this);
+	this.img = '../src/oldMan-drunk.jpg';
 	this.bac = 2;
 	this.anger = 30;
 	this.viciousness = 15;
