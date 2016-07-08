@@ -1,5 +1,14 @@
-div.buildScreen.arapey
-	div.choose--div
-		button#fight.btn.btn-default Fight!
+div.fightScreen.arapey
+	div
+		button#fight.btn.btn-default.fight--button Fight!
+	div.row.choose--div
+		div.col-xs-6
+			img(src=gImage)
+		div.col-xs-6
+			img(src=fImage)
 	div.results
+		div.col-xs-6.fight--grandpa
+			p.story= gStory
+		div.col-xs-6.fight--family
+			p.story= fStory
 		
