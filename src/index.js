@@ -54,6 +54,7 @@ $(function() {
 	$('.append-point').on('click', '#choose-btn', function() {
 		// if argument already exists then this is the second fighter
 		// and grandpa has already been randomly created
+		$('.feast').css("background-image", "url('../../src/images/livingRoom.jpg')");
 		if (argument === undefined) {
 			argument = new Argument();
 			// getGramps is a randomly chooses one of three grandpa types
@@ -69,7 +70,9 @@ $(function() {
 		}
 		// removes choose background and shows fight background
 		$('.append-point').empty();
-		$('.append-point').append(battle({}));
+		let gImage = argument.grandpa.img;
+		let fImage = argument.familyMember.img;
+		$('.append-point').append(battle({gImage: gImage, fImage: fImage}));
 	});
 	$('.append-point').on('click', '#fight', function() {
 		// argument fight conducts combat and returns an object
@@ -87,7 +90,10 @@ $(function() {
 		// if the family member has attacked 4 times (counting down from 4 to 1)
 		// or grandpa wins the fight (resulting in 'fatality')
 		// then player must choose another fighter
-		if (results.familyAttacks === 1 || results.fatality === 'family') chooseNextFam();
+		if (results.familyAttacks === 1 || results.fatality === 'family') {
+				$('.feast').css("background-image", "url('../../src/images/drunk-grandpa.jpg')");
+				chooseNextFam();
+		}
 		// if grandpa dies, then the family wins
 		if (results.fatality === 'grandpa') victory();
 	});
@@ -95,9 +101,10 @@ $(function() {
 	function chooseNextFam() {
 		console.log('chooseNextFam');
 		// replace with bootstrap modal
-		alert('Grandpa won that round, choose another fighter');
+		let message = "I won again, Loser. Heh heh heh. Which peckerwood's got next?"
 		$('div.append-point').empty();
-		$('div.append-point').append(buildScreen({family: family}));
+		$('div.append-point').append(buildScreen({family: family, message: message}));
+				// alert('Grandpa won that round, choose another fighter');
 	}
 
 	function victory() {
