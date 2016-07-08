@@ -14,6 +14,7 @@ const rules = require('../views/rules.jade');
 const aboutUs = require('../views/aboutUs.jade');
 const battle = require('../views/battle.jade');
 const fightResults = require('../views/fightResults.jade');
+const victoryView = require('../views/victoryView.jade');
 
 // 
 let argument;
@@ -33,13 +34,13 @@ $(function() {
 
 	$('#rules').on('click', function() {
 		toggleActive(this);
-		$('.feast').css("background-image", "url('../../src/images/thanksgiving-rockwell.jpg')")
+		$('.feast').css("background-image", "url('../../src/images/thanksgiving-rockwell.jpg')");
 		$('div.append-point').empty();
 		$('div.append-point').append(rules({}));
 	});
 	$('#start').on('click', function() {
 		toggleActive(this);
-		$('.feast').css("background-image", "url('../../src/images/uncle_sam.jpg')")
+		$('.feast').css("background-image", "url('../../src/images/uncle_sam.jpg')");
 		$('div.append-point').empty();
 		$('div.append-point').append(buildScreen({family: family}));
 	});
@@ -90,18 +91,18 @@ $(function() {
 		// if the family member has attacked 4 times (counting down from 4 to 1)
 		// or grandpa wins the fight (resulting in 'fatality')
 		// then player must choose another fighter
-		if (results.familyAttacks === 1 || results.fatality === 'family') {
-				$('.feast').css("background-image", "url('../../src/images/drunk-grandpa.jpg')");
-				chooseNextFam();
+		if (results.fatality === 'grandpa') {
+			victory();
+		} else if (results.familyAttacks === 1 || results.fatality === 'family') {
+			chooseNextFam();
 		}
 		// if grandpa dies, then the family wins
-		if (results.fatality === 'grandpa') victory();
 	});
 
 	function chooseNextFam() {
 		console.log('chooseNextFam');
-		// replace with bootstrap modal
-		let message = "I won again, Loser. Heh heh heh. Which peckerwood's got next?"
+		$('.feast').css("background-image", "url('../../src/images/drunk-grandpa.jpg')");
+		let message = "I won again, Loser. Heh heh heh. Which peckerwood's got next?";
 		$('div.append-point').empty();
 		$('div.append-point').append(buildScreen({family: family, message: message}));
 				// alert('Grandpa won that round, choose another fighter');
@@ -109,7 +110,9 @@ $(function() {
 
 	function victory() {
 		console.log('victory');
-		alert('Victory belongs to the family');
+		// alert('Victory belongs to the family');
+		$('div.append-point').empty();
+		$('div.append-point').append(victoryView({}));
 		// show family gloating
 		// go back to rules screen
 	}
