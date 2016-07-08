@@ -15,6 +15,7 @@ const aboutUs = require('../views/aboutUs.jade');
 const battle = require('../views/battle.jade');
 const fightResults = require('../views/fightResults.jade');
 const victoryView = require('../views/victoryView.jade');
+const gVictoryView = require('../views/gVictoryView.jade');
 
 // 
 let argument;
@@ -73,7 +74,14 @@ $(function() {
 		$('.append-point').empty();
 		let gImage = argument.grandpa.img;
 		let fImage = argument.familyMember.img;
-		$('.append-point').append(battle({gImage: gImage, fImage: fImage}));
+		let gStory = argument.grandpa.backStory;
+		let fStory = argument.familyMember.backStory;
+		$('.append-point').append(battle({
+			gImage: gImage, 
+			fImage: fImage,
+			gStory: gStory,
+			fStory: fStory
+		}));
 	});
 	$('.append-point').on('click', '#fight', function() {
 		// argument fight conducts combat and returns an object
@@ -91,21 +99,37 @@ $(function() {
 		// if the family member has attacked 4 times (counting down from 4 to 1)
 		// or grandpa wins the fight (resulting in 'fatality')
 		// then player must choose another fighter
+		console.log(results.fights);
 		if (results.fatality === 'grandpa') {
 			victory();
 		} else if (results.familyAttacks === 1 || results.fatality === 'family') {
-			chooseNextFam();
+			if (family.length === 0) {
+				gVictory();
+				// break;
+			} else {
+				chooseNextFam();
+			}
 		}
 		// if grandpa dies, then the family wins
 	});
 
+	function gVictory() {
+		console.log('gvicotyr');
+		$('.feast').css("background-image", "url('../../src/images/drunk-grandpa.jpg')");
+		$('div.append-point').empty();
+		$('div.append-point').append(gVictoryView({}));
+	}
+
 	function chooseNextFam() {
+		console.log('family array length', family.length);
+
 		console.log('chooseNextFam');
 		$('.feast').css("background-image", "url('../../src/images/drunk-grandpa.jpg')");
 		let message = "I won again, Loser. Heh heh heh. Which peckerwood's got next?";
 		$('div.append-point').empty();
 		$('div.append-point').append(buildScreen({family: family, message: message}));
 				// alert('Grandpa won that round, choose another fighter');
+		argument.fights += 1;
 	}
 
 	function victory() {
