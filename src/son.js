@@ -14,6 +14,7 @@ const Son = function() {
 	this.weapons.push(new FamWeapon.SonTruth());
 	this.weapons.push(new FamWeapon.SonShot());
 	this.weapons.push(new FamWeapon.SonSleep());
+	this.backStory = "Growing up in a cold home, Jerry always dreamed of greener pastures. He was always jealous of other families, and now, he’s just had enough.";
 };
 
 module.exports = Son;

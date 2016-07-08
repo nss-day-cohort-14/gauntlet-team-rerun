@@ -14,6 +14,7 @@ const SmartGrandpa = function () {
 	this.weapons.push(new GrandWeapon.TheSnort());
 	this.weapons.push(new GrandWeapon.MemoryBomb());
 	this.weapons.push(new GrandWeapon.YawnZilla());
+	this.backStory = "As curmudgeonly as they come, Grandpa has been a ticking time bomb for years. With a rapier’s wit and a sharp tongue, there’s no escaping the vicious cutting words of… Smart Grandpa!";
 };
 
 module.exports = SmartGrandpa;

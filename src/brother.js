@@ -14,6 +14,7 @@ const Brother = function() {
 	this.weapons.push(new FamWeapon.BrotherTruth());
 	this.weapons.push(new FamWeapon.BrotherMooch());
 	this.weapons.push(new FamWeapon.BrotherBlow());
+	this.backStory = "Always the second fiddle to his older, more dominant brother, Jack’s grown tired of difficult holiday dinners and has decided to unleash the anger that’s been marinating for all these years and give his brother a piece of his mind… before it’s too late."
 };
 
 module.exports = Brother;

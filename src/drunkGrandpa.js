@@ -14,6 +14,7 @@ function DrunkGrandpa () {
 	this.weapons.push(new GrandWeapon.RacistComment());
 	this.weapons.push(new GrandWeapon.MumbleBee());
 	this.weapons.push(new GrandWeapon.BoozeOoka());
+	this.backStory = "As curmudgeonly as they come, Grandpa has been a ticking time bomb for years. Mixed with his daily Bourbon binge, he’s an explosive cocktail on the verge of detonation. He is… Drunk Grandpa!"
 }
 
 module.exports = DrunkGrandpa;
