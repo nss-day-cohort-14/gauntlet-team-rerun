@@ -79,8 +79,11 @@ $(function() {
 		console.log(results);
 		$('.results').empty();
 		let familyMember = argument.familyMember.name;
+		let gImage = argument.grandpa.img;
+		let fImage = argument.familyMember.img;
+		console.log(argument);
 		// passes fight results and the name of the family member
-		$('.results').append(fightResults({results, familyMember}));
+		$('.results').append(fightResults({results, familyMember, gImage, fImage}));
 		// if the family member has attacked 4 times (counting down from 4 to 1)
 		// or grandpa wins the fight (resulting in 'fatality')
 		// then player must choose another fighter
