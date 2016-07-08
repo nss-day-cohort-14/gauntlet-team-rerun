@@ -14,6 +14,7 @@ const Daughter = function() {
 	this.weapons.push(new FamWeapon.DaughterThreat());
 	this.weapons.push(new FamWeapon.DaughterChange());
 	this.weapons.push(new FamWeapon.DaughterBeam());
+	this.backStory = "Growing up yearning for a real relationship with her father, Susie has always been distant from her family. But years of neglect and belittling comments take a toll on a woman…"
 };
 
 module.exports = Daughter;

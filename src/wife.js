@@ -14,6 +14,7 @@ const Wife = function() {
 	this.weapons.push(new FamWeapon.WifeSilent());
 	this.weapons.push(new FamWeapon.WifeGuilt());
 	this.weapons.push(new FamWeapon.WifeCurse());
+	this.backStory = "A wife can only take so much, and after years of verbal abuse and neglect, a grandma’s gotta do what a grandma’s gotta do. "
 };
 
 module.exports = Wife;

@@ -15,6 +15,7 @@ function MeanGrandpa () {
 	this.weapons.push(new GrandWeapon.InsultBarrage());
 	this.weapons.push(new GrandWeapon.Leer());
 	this.weapons.push(new GrandWeapon.UltraSigh());
+	this.backStory = "As curmudgeonly as they come, Grandpa has been a ticking time bomb for years. His power comes from his pent up rage and relentless boredom. Watch out for… Mean Grandpa!";
 }
 
 module.exports = MeanGrandpa;
