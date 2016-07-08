@@ -72,6 +72,7 @@ $(function() {
 		}
 		// removes choose background and shows fight background
 		$('.append-point').empty();
+		let fName = argument.familyMember.name;
 		let gImage = argument.grandpa.img;
 		let fImage = argument.familyMember.img;
 		let gStory = argument.grandpa.backStory;
@@ -80,7 +81,8 @@ $(function() {
 			gImage: gImage, 
 			fImage: fImage,
 			gStory: gStory,
-			fStory: fStory
+			fStory: fStory,
+			fName: fName
 		}));
 	});
 	$('.append-point').on('click', '#fight', function() {
