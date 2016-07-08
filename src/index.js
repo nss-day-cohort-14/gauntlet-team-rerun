@@ -74,7 +74,7 @@ $(function() {
 		// display results;
 		console.log(results);
 		$('.results').empty();
-		let familyMember = argument.familyMember;
+		let familyMember = argument.familyMember.name;
 		$('.results').append(fightResults({results, familyMember}));
 		if (results.familyAttacks === 1 || results.fatality === 'family') chooseNextFam();
 		if (results.fatality === 'grandpa') victory();
